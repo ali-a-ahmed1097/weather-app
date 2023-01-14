@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        td,
+        th {
+            border: 1px solid rgb(190, 190, 190);
+            padding: 10px 20px;
+            border-bottom-color: black;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        th[colspan],
+        .end {
+            border-right-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Data from: toronto</caption>
+        <thead>
+            <th colspan="2">coord</th>
+            <th colspan="6">main</th>
+            <th colspan="2">wind</th>
+            <th>weather</th>
+        </thead>
+        <tbody>
+            <tr>
+                <th>lon</th>
+                <th class="end">lat</th>
+                <th>temp</th>
+                <th>feels_like</th>
+                <th>temp_min</th>
+                <th>temp_max</th>
+                <th>pressure</th>
+                <th class="end">humidity</th>
+                <th>speed</th>
+                <th class="end">deg</th>
+                <th>description</th>
+
+            </tr>
+            <tr>
+                <td>-79.4163</td>
+                <td class="end">43.7001</td>
+                <td>271.37</td>
+                <td>266.24</td>
+                <td>270.42</td>
+                <td>272.98</td>
+                <td>1029</td>
+                <td class="end">73</td>
+                <td>4.63</td>
+                <td class="end">240</td>
+                <td>clear sky</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <input type="text" name="location" id="location" placeholder="Enter a city name">
+    <button>Search weather</button>
+</body>
+
+</html>
