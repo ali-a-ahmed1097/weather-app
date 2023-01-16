@@ -1,6 +1,5 @@
 
-function getWeather() {
-    const location = document.getElementById('location').value;
+function getWeather(location) {
     if (location !== '') {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=57093c04b4e625060b9132b088866101`)
             .then(response => response.json())
@@ -29,7 +28,7 @@ function getWeather() {
 const weather = document.querySelector('button');
 const input = document.querySelector('input');
 
-weather.addEventListener('click', getWeather);
+weather.addEventListener('click', () => getWeather(document.getElementById('location').value));
 input.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         e.preventDefault();
@@ -37,3 +36,4 @@ input.addEventListener('keypress', function (e) {
     }
 });
 
+getWeather('Toronto');
